@@ -44,7 +44,6 @@
             "warn",
             {
                 "selector": [
-                    "function",
                     "classMethod",
                     "objectLiteralMethod",
                     "typeMethod"
@@ -122,6 +121,7 @@
             },
             {
                 "selector": [
+                    "function",
                     "class",
                     "interface",
                     "typeAlias",

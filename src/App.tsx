@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './Assets/logo.svg';
 import './App.css';
 
-function app(): JSX.Element {
+function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +23,4 @@ function app(): JSX.Element {
   );
 }
 
-export default app;
+export default App;
