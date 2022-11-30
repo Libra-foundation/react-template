@@ -2,10 +2,10 @@ import type { ReportHandler } from 'web-vitals';
 
 type Handler = (onReport: ReportHandler, reportAllChanges?: boolean | undefined) => void
 
-const REPORT_WEB_VITALS = (on_perf_entry?: ReportHandler): void => {
+function ReportWebVitals(on_perf_entry?: ReportHandler): void {
   if (on_perf_entry && on_perf_entry instanceof Function) {
-    let a = import('web-vitals')
-    a.then(
+    const A = import('web-vitals')
+    A.then(
       (
         { getCLS: get_cls, getFID: get_fid, getFCP: get_fcp, getLCP: get_lcp, getTTFB: get_ttfb }:
           Readonly<{ // the names cannot be redefined
@@ -32,6 +32,6 @@ const REPORT_WEB_VITALS = (on_perf_entry?: ReportHandler): void => {
       }
     );
   }
-};
+}
 
-export default REPORT_WEB_VITALS;
+export default ReportWebVitals;

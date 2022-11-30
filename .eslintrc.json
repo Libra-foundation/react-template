@@ -243,7 +243,6 @@
         "no-setter-return": "error",
         "no-sparse-arrays": "error",
         "no-this-before-super": "error",
-        "no-undef": "error",
         "no-unexpected-multiline": "error",
         "no-unmodified-loop-condition": "error",
         "no-unreachable": "error",
@@ -272,7 +271,18 @@
         "no-empty": "error",
         "no-eq-null": "error",
         "no-extra-semi": "error",
-        "no-global-assign": "error"
-
+        "no-global-assign": "error",
+        "no-implicit-coercion": "error",
+        "no-label-var": "error",
+        "no-lonely-if": "error",
+        "no-nested-ternary": "error",
+        "no-redeclare": "error",
+        "no-useless-escape": "error",
+        "no-useless-return": "error",
+        "no-var": "error",
+        "prefer-const": "error",
+        "require-await": "error",
+        "require-yield": "error",
+        "yoda": "error"
     }
 }
