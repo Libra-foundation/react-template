@@ -1,11 +1,11 @@
 import React from "react";
-import './ScopedStyle.scoped.css';
+import cssStyleClassName from './ScopedStyle.module.css';
 
 export default function ScopedComponent():JSX.Element{
 
     return(
         <div>
-            <p className="test">
+            <p className={cssStyleClassName.test}>
                 Scoped
             </p>
         </div>
