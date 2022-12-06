@@ -26,8 +26,11 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: echo CI=true && npm run coverage > .github/workflows/coverage.md
+    - name: Format comment
+      run: |
+        sed -i '$ d' .github/workflows/coverage.md
+        sed -i "0,/-|/{/-|/d}" .github/workflows/coverage.md
     - name: Writing comment
-      run: ls -Flas .
     - uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
