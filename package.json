@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint './**/*.ts' './**/*.tsx' --fix",
-    "coverage":"react-scripts test --coverage --reporter=html"
+    "coverage": "react-scripts test --coverage --reporter=html"
   },
   "browserslist": {
     "production": [
@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.28.0",
-    "eslint-plugin-react": "^7.31.11"
+    "eslint-plugin-react": "^7.31.11",
+    "sass": "^1.56.1"
   }
 }
