@@ -31,7 +31,7 @@ jobs:
         sed -i '$ d' .github/workflows/coverage.md
         sed -i "0,/-|/{/-|/d}" .github/workflows/coverage.md
     - name: Writing comment
-    - uses: harupy/comment-on-pr@master
+      uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
