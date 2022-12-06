@@ -26,7 +26,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: echo CI=true && npm run coverage >> ${{ env.TEMP_DIR}}/coverage.md
+    - run: CI=true && npm run coverage > ${{ env.TEMP_DIR}}/coverage.md
+    - run: echo "data" >> ${{ env.TEMP_DIR}}/coverage.md
     - uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
