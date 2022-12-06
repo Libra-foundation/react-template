@@ -18,17 +18,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - run: echo "TEMP_DIR=$(mktemp -d)" >> $GITHUB_ENV
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: CI=true && npm run coverage > ${{HOME}}/coverage.md
-    - run: echo "data" >> ${{HOME}}/coverage.md
+    - run: echo CI=true && npm run coverage >> ${{ env.TEMP_DIR}}/coverage.md
+    - run: ls -Flas ${{ env.TEMP_DIR }}
     - uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        filename: ${{HOME}}/coverage.md
+        filename: ${{ env.TEMP_DIR}}/coverage.md
