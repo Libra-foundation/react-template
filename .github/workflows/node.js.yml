@@ -21,13 +21,14 @@ jobs:
     - run: echo "TEMP_DIR=$(mktemp -d)" >> $GITHUB_ENV
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-    - uses: actions/setup-node@v3
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: echo CI=true && npm run coverage >> ${{ env.TEMP_DIR}}/coverage.md
-    - run: ls -Flas ${{ env.TEMP_DIR }}
+    - name: Writing comment
+      run: ls -Flas ${{ env.TEMP_DIR }}
     - uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
