@@ -28,4 +28,4 @@ jobs:
     - run: MSG=$(CI=true && npm run coverage)
     - uses: thollander/actions-comment-pull-request@v2
       with:
-        message: ${MSG}
+        message: ${{MSG}}
