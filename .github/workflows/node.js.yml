@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: MSG=$(CI=true && npm run coverage)
+    - run: echo "MSG=$(CI=true && npm run coverage)" >> $GITHUB_ENV
     - uses: thollander/actions-comment-pull-request@v2
       with:
-        message: ${{MSG}}
+        message: ${{env.MSG}}
