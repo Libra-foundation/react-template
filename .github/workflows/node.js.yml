@@ -26,7 +26,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: CI=true && npm coverage > coverage.md
+    - run: CI=true && npm run coverage > coverage.md
     - uses: harupy/comment-on-pr@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
