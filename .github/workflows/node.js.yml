@@ -26,12 +26,12 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - run: echo CI=true && npm run coverage > .github/workflows/coverage.md
+    - run: echo CI=true && npm run coverage > coverage.md
 
     - name: Format comment
       run: |
-        sed -i '$ d' .github/workflows/coverage.md
-        sed -i "0,/-|/{/-|/d}" .github/workflows/coverage.md
+        sed -i '$ d' coverage.md
+        sed -i "0,/-|/{/-|/d}" coverage.md
 
     - name: Writing comment
       uses: Correlatio-company/Pull-Request-Comments@V1.1
