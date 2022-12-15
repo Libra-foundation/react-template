@@ -25,7 +25,9 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - run: echo CI=true && npm run coverage > coverage.md
-
-    - name: Apply Linter
-      run: npm run lint-only
+    - uses: sibiraj-s/action-eslint@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        eslint-args: '--ignore-path=.gitignore --quiet'
+        extensions: 'js,jsx,ts,tsx'
+        annotations: true
