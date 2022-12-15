@@ -1,5 +1,5 @@
 import React from "react";
-import cssStyleClassName from './ScopedStyle.module.css';
+import cssStyleClassName from './ScopedStyle.module.sass';
 
 export default function ScopedComponent():JSX.Element{
 

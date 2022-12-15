@@ -1,5 +1,5 @@
 import React from 'react';
-import './DummyStyle.css';
+import './DummyStyle.sass';
 
 export default function DummyComponent():JSX.Element{
 
