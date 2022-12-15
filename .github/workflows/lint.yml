@@ -6,7 +6,8 @@ on:
 
 jobs:
   build:
-    permissions: write-all
+    permissions:
+      checks: write
     
     runs-on: ubuntu-latest
 
@@ -25,7 +26,6 @@ jobs:
 
     - run: npm ci
     - run: npm run lint -- --output-file eslint_report.json --format json
-    - run: npm run lint
 
     - name: Annotate Code Linting Results
       uses: ataylorme/eslint-annotate-action@1.2.0
