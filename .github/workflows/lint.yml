@@ -25,9 +25,11 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - uses: sibiraj-s/action-eslint@v2
+    - run: npm run lint -- --output-file eslint_report.json --format json
+
+    - name: Annotate Code Linting Results
+      uses: ataylorme/eslint-annotate-action@1.2.0
+      if: always()
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        eslint-args: '--ignore-path=.gitignore --quiet'
-        extensions: 'js,jsx,ts,tsx'
-        annotations: true
+        repo-token: '${{ secrets.GITHUB_TOKEN }}'
+        report-json: 'eslint_report.json'

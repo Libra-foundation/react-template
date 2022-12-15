@@ -20,8 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "eslint ./src --ext js,ts,tsx --fix",
-    "lint-only": "eslint ./src --ext js,ts,tsx",
+    "lint": "eslint ./src --ext js,ts,tsx",
     "coverage": "react-scripts test --coverage --reporter=html"
   },
   "browserslist": {
