@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(<App />); // rendering app
   const LINK_ELEMENT = screen.getByText("Test");
   expect(LINK_ELEMENT).toBeInTheDocument();
 });
