@@ -33,4 +33,3 @@ jobs:
       with:
         repo-token: '${{ secrets.GITHUB_TOKEN }}'
         report-json: 'eslint_report.json'
-        only-pr-files: false
