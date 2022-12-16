@@ -1,0 +1,41 @@
+name: Coverage compuation CI
+
+on:
+  pull_request:
+    branches: [ "main", "developement" ]
+
+jobs:
+  build:
+    permissions:
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - run: npm ci
+    - run: echo CI=true && npm run coverage > coverage.md
+
+    - name: Format comment
+      run: |
+        sed -i '$ d' coverage.md
+        sed -i "0,/-|/{/-|/d}" coverage.md
+
+    - name: Writing comment
+      uses: Correlatio-company/Pull-Request-Comments@V1.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        filename: coverage.md
+        tag: 'Coverage'

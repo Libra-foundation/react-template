@@ -1,10 +1,10 @@
-import React from 'react';
-import DummyPage from './Pages/DummyPage';
+import React from "react";
+import DummyPage from "./Pages/DummyPage";
 
 function App(): JSX.Element {
   return (
     <div>
-      <DummyPage/>
+      <DummyPage />
     </div>
   );
 }
