@@ -17,11 +17,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "env-cmd -f .env.development react-scripts start",
+    "build_preprod": "env-cmd -f .env.preproduction react-scripts build",
+    "build_prod": "env-cmd -f .env.production react-scripts build",
+    "test": "env-cmd -f .env.development react-scripts test",
     "lint": "eslint ./src --ext js,ts,tsx",
-    "coverage": "react-scripts test --coverage --reporter=html",
+    "coverage": "env-cmd -f .env.development react-scripts test --coverage --reporter=html",
     "prepare": "husky install"
   },
   "browserslist": {
