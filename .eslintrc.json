@@ -68,6 +68,15 @@
           "accessor"
         ],
         "format": ["snake_case"],
+        "modifiers": [
+          "async",
+          "destructured",
+          "exported",
+          "global",
+          "unused",
+          "public",
+          "requiresQuotes"
+        ],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -82,6 +91,15 @@
         ],
         "format": ["snake_case"],
         "types": ["boolean"],
+        "modifiers": [
+          "async",
+          "destructured",
+          "exported",
+          "global",
+          "unused",
+          "public",
+          "requiresQuotes"
+        ],
         "prefix": ["is_"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
@@ -96,7 +114,7 @@
           "accessor"
         ],
         "format": ["UPPER_CASE"],
-        "modifiers": ["const"],
+        "modifiers": ["const", "readonly"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -110,7 +128,7 @@
           "accessor"
         ],
         "format": ["UPPER_CASE"],
-        "modifiers": ["const"],
+        "modifiers": ["const", "readonly"],
         "types": ["boolean"],
         "prefix": ["IS_"],
         "leadingUnderscore": "forbid",
