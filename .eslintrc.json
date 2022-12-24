@@ -52,6 +52,59 @@
     "@typescript-eslint/naming-convention": [
       "warn",
       {
+        "selector": ["objectLiteralProperty", "accessor"],
+        "format": ["UPPER_CASE", "snake_case"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["objectLiteralProperty", "accessor"],
+        "format": ["UPPER_CASE", "snake_case"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid",
+        "types": ["boolean"],
+        "prefix": ["IS_", "is_"]
+      },
+      {
+        "selector": ["variable"],
+        "format": ["UPPER_CASE"],
+        "modifiers": ["const"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["variable"],
+        "format": ["UPPER_CASE"],
+        "modifiers": ["const"],
+        "types": ["boolean"],
+        "prefix": ["IS_"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["classProperty", "typeProperty", "parameterProperty"],
+        "format": ["UPPER_CASE"],
+        "modifiers": ["readonly"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["classProperty", "typeProperty", "parameterProperty"],
+        "format": ["UPPER_CASE"],
+        "modifiers": ["readonly"],
+        "types": ["boolean"],
+        "prefix": ["IS_"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+
+      {
+        "selector": ["enumMember"],
+        "format": ["UPPER_CASE"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
         "selector": ["classMethod", "objectLiteralMethod", "typeMethod"],
         "format": ["camelCase"],
         "leadingUnderscore": "forbid",
@@ -62,21 +115,11 @@
           "parameter",
           "variable",
           "classProperty",
-          "objectLiteralProperty",
           "typeProperty",
           "parameterProperty",
           "accessor"
         ],
         "format": ["snake_case"],
-        "modifiers": [
-          "async",
-          "destructured",
-          "exported",
-          "global",
-          "unused",
-          "public",
-          "requiresQuotes"
-        ],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -84,59 +127,13 @@
         "selector": [
           "variable",
           "classProperty",
-          "objectLiteralProperty",
           "typeProperty",
           "parameterProperty",
           "accessor"
         ],
         "format": ["snake_case"],
         "types": ["boolean"],
-        "modifiers": [
-          "async",
-          "destructured",
-          "exported",
-          "global",
-          "unused",
-          "public",
-          "requiresQuotes"
-        ],
         "prefix": ["is_"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "selector": [
-          "variable",
-          "classProperty",
-          "objectLiteralProperty",
-          "typeProperty",
-          "parameterProperty",
-          "accessor"
-        ],
-        "format": ["UPPER_CASE"],
-        "modifiers": ["const", "readonly"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "selector": [
-          "variable",
-          "classProperty",
-          "objectLiteralProperty",
-          "typeProperty",
-          "parameterProperty",
-          "accessor"
-        ],
-        "format": ["UPPER_CASE"],
-        "modifiers": ["const", "readonly"],
-        "types": ["boolean"],
-        "prefix": ["IS_"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "selector": ["enumMember"],
-        "format": ["UPPER_CASE"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },

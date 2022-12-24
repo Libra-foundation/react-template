@@ -8,6 +8,6 @@ interface EnvType {
 
 const ENVCONFIG: EnvType = {
   REACT_APP_ENVIRONMENT: GetEnv("REACT_APP_ENVIRONMENT", "ENVIRONMENT"),
-};
+} as const;
 
 export default ENVCONFIG;
