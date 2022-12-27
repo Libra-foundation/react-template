@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div style="text-align:center;">
+    <img alt="React template" src="./src/Assets/ReactTemplateLogo.svg" height="200px"/>
+    <h1>Getting Started with E-constellatio's React template</h1>
+</div>
 
 ## Available Scripts
 
@@ -17,30 +18,42 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Test will use `.env.development` file which contain all environment variables.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
-### `npm run build`
+### `npm run build_preprod`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for pre-production to the `build` folder.\
+It will use `.env.preproduction` file which contain all pre-production environment variables.\
+It correctly bundles React in pre-production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run build_prod`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Like for `npm run build_preprod` this command do a build but use `.env.production` file which contain all production
+variables.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm run coverage`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Run tests and compute coverage of your code.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A suitable command to run while creating your tests. An alternative to `npm test` with more information like coverage of
+your code by tests. Be careful `npm run coverage` is heavier and makes tests slower. Moreover, this command will run
+continuously as long as you don't terminate it. This implies that the command needs its own terminal if you don't want
+to run and kill it several times in a single development session.
+
+### `npm run lint`
+
+Run linter and tell you which lines don't respect rules. For more information about rules
+see [wiki](https://github.com/Correlatio-company/react-template/wiki).
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [react-template wki](https://github.com/Correlatio-company/react-template/wiki).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
