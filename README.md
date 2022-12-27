@@ -1,9 +1,9 @@
-<div align="center">
+<div style="text-align:center;">
     <img alt="React template" src="./src/Assets/ReactTemplateLogo.svg" height="200px"/>
-    <h1>Getting Started with E-constellatio React template</h1>
+    <h1>Getting Started with E-constellatio's React template</h1>
 </div>
 
-## Starting commands
+## Available Scripts
 
 In the project directory, you can run:
 
