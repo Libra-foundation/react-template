@@ -52,6 +52,11 @@
     "@typescript-eslint/naming-convention": [
       "warn",
       {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "format": null
+      },
+      {
         "selector": ["objectLiteralProperty", "accessor"],
         "format": ["UPPER_CASE", "snake_case"],
         "leadingUnderscore": "forbid",
