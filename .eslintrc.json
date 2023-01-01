@@ -52,11 +52,6 @@
     "@typescript-eslint/naming-convention": [
       "warn",
       {
-        "selector": ["variable", "parameter"],
-        "modifiers": ["destructured"],
-        "format": null
-      },
-      {
         "selector": ["objectLiteralProperty", "accessor"],
         "format": ["UPPER_CASE", "snake_case"],
         "leadingUnderscore": "forbid",
@@ -69,6 +64,23 @@
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
         "prefix": ["IS_", "is_"]
+      },
+      {
+        "selector": ["variable"],
+        "format": ["PascalCase"],
+        "types": ["function"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "format": null
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "format": null
       },
       {
         "selector": ["variable"],
@@ -285,7 +297,7 @@
     "default-case-last": "error",
     "consistent-return": "error",
     "eqeqeq": "error",
-    "func-style": ["error", "declaration"],
+    "func-style": ["error", "declaration", {"allowArrowFunctions": true}],
     "no-alert": "error",
     "no-case-declarations": "error",
     "no-confusing-arrow": "error",
