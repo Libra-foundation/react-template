@@ -16,16 +16,15 @@ function ReportWebVitals(on_perf_entry?: ReportHandler): void {
         getLCP: get_lcp,
         getTTFB: get_ttfb,
       }: Readonly<{
-        // the names cannot be redefined
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/naming-convention -- the names cannot be redefined
         getCLS: Handler;
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/naming-convention -- the names cannot be redefined
         getFCP: Handler;
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/naming-convention -- the names cannot be redefined
         getFID: Handler;
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/naming-convention -- the names cannot be redefined
         getLCP: Handler;
-        // eslint-disable-next-line @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/naming-convention -- the names cannot be redefined
         getTTFB: Handler;
       }>) => {
         get_cls(on_perf_entry);
