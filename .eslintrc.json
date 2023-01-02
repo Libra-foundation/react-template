@@ -31,7 +31,10 @@
     }
   },
   "rules": {
-    "eslint-comments/require-description": "error",
+    "eslint-comments/require-description": [
+      "error",
+      {"ignore": ["eslint-enable"]}
+    ],
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
       "warn",
