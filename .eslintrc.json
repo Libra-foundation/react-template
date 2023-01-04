@@ -53,13 +53,13 @@
       "warn",
       {
         "selector": ["objectLiteralProperty", "accessor"],
-        "format": ["UPPER_CASE", "snake_case"],
+        "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
         "selector": ["objectLiteralProperty", "accessor"],
-        "format": ["UPPER_CASE", "snake_case"],
+        "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
@@ -105,28 +105,14 @@
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": [
-          "classProperty",
-          "typeProperty",
-          "parameterProperty",
-          "classProperty",
-          "typeProperty",
-          "parameterProperty"
-        ],
+        "selector": ["classProperty", "typeProperty", "parameterProperty"],
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": [
-          "classProperty",
-          "typeProperty",
-          "parameterProperty",
-          "classProperty",
-          "typeProperty",
-          "parameterProperty"
-        ],
+        "selector": ["classProperty", "typeProperty", "parameterProperty"],
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
         "types": ["boolean"],
