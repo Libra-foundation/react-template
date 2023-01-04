@@ -99,14 +99,34 @@
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": ["classProperty", "typeProperty", "parameterProperty"],
+        "selector": ["enumMember"],
+        "format": ["UPPER_CASE"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": [
+          "classProperty",
+          "typeProperty",
+          "parameterProperty",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": ["classProperty", "typeProperty", "parameterProperty"],
+        "selector": [
+          "classProperty",
+          "typeProperty",
+          "parameterProperty",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
         "types": ["boolean"],
@@ -114,40 +134,42 @@
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
-
       {
-        "selector": ["enumMember"],
-        "format": ["UPPER_CASE"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "selector": ["classMethod", "objectLiteralMethod", "typeMethod"],
+        "selector": [
+          "classMethod",
+          "objectLiteralMethod",
+          "typeMethod",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
         "selector": [
-          "parameter",
-          "variable",
+          "classMethod",
+          "objectLiteralMethod",
+          "typeMethod",
           "classProperty",
           "typeProperty",
-          "parameterProperty",
-          "accessor"
+          "parameterProperty"
         ],
+        "format": ["camelCase"],
+        "types": ["boolean"],
+        "prefix": ["is"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["parameter", "variable"],
         "format": ["snake_case"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": [
-          "variable",
-          "classProperty",
-          "typeProperty",
-          "parameterProperty",
-          "accessor"
-        ],
+        "selector": ["parameter", "variable"],
         "format": ["snake_case"],
         "types": ["boolean"],
         "prefix": ["is_"],
