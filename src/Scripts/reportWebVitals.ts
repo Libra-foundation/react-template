@@ -16,7 +16,7 @@ function ReportWebVitals(on_perf_entry?: ReportHandler): void {
         getLCP,
         getTTFB,
       }: Readonly<{
-        /* eslint-disable @typescript-eslint/naming-convention */
+        /* eslint-disable @typescript-eslint/naming-convention -- the names cannot be redefined */
         getCLS: Handler;
         getFCP: Handler;
         getFID: Handler;
