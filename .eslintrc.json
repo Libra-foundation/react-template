@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended"],
+  "extends": ["plugin:react/recommended", "plugin:eslint-comments/recommended"],
   "overrides": [
     {
       "files": ["*.test.*"],
@@ -31,6 +31,10 @@
     }
   },
   "rules": {
+    "eslint-comments/require-description": [
+      "error",
+      {"ignore": ["eslint-enable"]}
+    ],
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": [
       "warn",
@@ -53,13 +57,13 @@
       "warn",
       {
         "selector": ["objectLiteralProperty", "accessor"],
-        "format": ["UPPER_CASE", "snake_case"],
+        "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
         "selector": ["objectLiteralProperty", "accessor"],
-        "format": ["UPPER_CASE", "snake_case"],
+        "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
@@ -67,6 +71,23 @@
       },
       {
         "selector": ["variable"],
+        "format": ["PascalCase"],
+        "types": ["function"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "format": null
+      },
+      {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "format": null
+      },
+      {
+        "selector": ["variable"],
         "format": ["UPPER_CASE"],
         "modifiers": ["const"],
         "leadingUnderscore": "forbid",
@@ -82,6 +103,12 @@
         "trailingUnderscore": "forbid"
       },
       {
+        "selector": ["enumMember"],
+        "format": ["UPPER_CASE"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
         "selector": ["classProperty", "typeProperty", "parameterProperty"],
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
@@ -97,40 +124,42 @@
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
-
       {
-        "selector": ["enumMember"],
-        "format": ["UPPER_CASE"],
-        "leadingUnderscore": "forbid",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "selector": ["classMethod", "objectLiteralMethod", "typeMethod"],
+        "selector": [
+          "classMethod",
+          "objectLiteralMethod",
+          "typeMethod",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
         "selector": [
-          "parameter",
-          "variable",
+          "classMethod",
+          "objectLiteralMethod",
+          "typeMethod",
           "classProperty",
           "typeProperty",
-          "parameterProperty",
-          "accessor"
+          "parameterProperty"
         ],
+        "format": ["camelCase"],
+        "types": ["boolean"],
+        "prefix": ["is"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": ["parameter", "variable"],
         "format": ["snake_case"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": [
-          "variable",
-          "classProperty",
-          "typeProperty",
-          "parameterProperty",
-          "accessor"
-        ],
+        "selector": ["parameter", "variable"],
         "format": ["snake_case"],
         "types": ["boolean"],
         "prefix": ["is_"],
@@ -280,7 +309,7 @@
     "default-case-last": "error",
     "consistent-return": "error",
     "eqeqeq": "error",
-    "func-style": ["error", "declaration"],
+    "func-style": ["error", "declaration", {"allowArrowFunctions": true}],
     "no-alert": "error",
     "no-case-declarations": "error",
     "no-confusing-arrow": "error",
