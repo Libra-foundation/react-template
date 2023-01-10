@@ -33,7 +33,7 @@ jobs:
         sed -i "0,/-|/{/-|/d}" coverage.md
 
     - name: Writing comment
-      uses: Correlatio-company/Pull-Request-Comments@V1.1
+      uses: Libra-foundation/Pull-Request-Comments@V1.1.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
