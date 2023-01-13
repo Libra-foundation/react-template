@@ -60,6 +60,10 @@
           "NewableFunction": {
             "message": "The NewableFunction type is too braod. Using this type will cause you trouble with readonly.",
             "fixWith": "()=>void"
+          },
+          "any": {
+            "message": "The any type is unsafe and too broad. Consider using a more constrained type if possible.",
+            "fixWith": "unknown"
           }
         },
         "extendDefaults": true
@@ -266,7 +270,6 @@
     "@typescript-eslint/dot-notation": "warn",
     "@typescript-eslint/no-dupe-class-members": "warn",
     "@typescript-eslint/no-empty-function": "error",
-    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-implied-eval": "error",
     "@typescript-eslint/no-invalid-this": "warn",
     "@typescript-eslint/no-loop-func": "warn",
