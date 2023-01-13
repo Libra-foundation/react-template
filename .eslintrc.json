@@ -42,6 +42,29 @@
     ],
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/ban-ts-comment": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "object": {
+            "message": "In TS object mean any JS object. This type is way too broad, consider narrowing it down."
+          },
+          "Function": {
+            "message": "The Function type is too braod. Using this type will cause you trouble with readonly.",
+            "fixWith": "()=>void"
+          },
+          "CallableFunction": {
+            "message": "The CallableFunction type is too braod. Using this type will cause you trouble with readonly.",
+            "fixWith": "()=>void"
+          },
+          "NewableFunction": {
+            "message": "The NewableFunction type is too braod. Using this type will cause you trouble with readonly.",
+            "fixWith": "()=>void"
+          }
+        },
+        "extendDefaults": true
+      }
+    ],
     "@typescript-eslint/class-literal-property-style": "warn",
     "@typescript-eslint/consistent-generic-constructors": "warn",
     "@typescript-eslint/consistent-indexed-object-style": "warn",
