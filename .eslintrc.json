@@ -70,7 +70,7 @@
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
-        "prefix": ["IS_", "is_"]
+        "prefix": ["IS_", "is"]
       },
       {
         "selector": ["variable"],
