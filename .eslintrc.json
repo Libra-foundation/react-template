@@ -243,6 +243,7 @@
     "@typescript-eslint/dot-notation": "warn",
     "@typescript-eslint/no-dupe-class-members": "warn",
     "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-implied-eval": "error",
     "@typescript-eslint/no-invalid-this": "warn",
     "@typescript-eslint/no-loop-func": "warn",
