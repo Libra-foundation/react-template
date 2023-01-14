@@ -2,7 +2,7 @@ name: Linter CI
 
 on:
   pull_request:
-    branches: [ "main", "developement" ]
+    branches: [ "main", "development" ]
 
 jobs:
   build:
