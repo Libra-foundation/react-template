@@ -93,7 +93,7 @@
       },
       {
         "selector": ["accessor"],
-        "format": ["UPPER_CASE", "camelCase"],
+        "format": ["UPPER_CASE", "PascalCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
@@ -178,7 +178,7 @@
           "typeProperty",
           "parameterProperty"
         ],
-        "format": ["camelCase"],
+        "format": ["PascalCase"],
         "types": ["boolean"],
         "prefix": ["is"],
         "leadingUnderscore": "forbid",
