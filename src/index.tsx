@@ -4,7 +4,7 @@ import "./index.sass";
 import App from "./App";
 import ReportWebVitals from "./Scripts/reportWebVitals";
 
-const ROOT = ReactDOM.createRoot(
+const ROOT: ReactDOM.Root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 ROOT.render(<App />);
