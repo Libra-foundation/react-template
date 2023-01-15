@@ -24,7 +24,7 @@
     "build_prod": "env-cmd -f .env.production react-scripts build",
     "test": "env-cmd -f .env.development react-scripts test",
     "lint": "eslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "coverage": "npm test -- --coverage --reporter=html",
+    "coverage": "npm test -- --coverage --reporter=html --watchAll",
     "prepare": "husky install"
   },
   "browserslist": {
