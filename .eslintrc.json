@@ -100,7 +100,12 @@
         "prefix": ["IS_", "is"]
       },
       {
-        "selector": ["variable"],
+        "selector": [
+          "variable",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["PascalCase"],
         "types": ["function"],
         "leadingUnderscore": "forbid",
@@ -113,11 +118,6 @@
       },
       {
         "selector": ["objectLiteralProperty", "objectLiteralMethod"],
-        "format": null
-      },
-      {
-        "selector": ["variable", "parameter"],
-        "modifiers": ["destructured"],
         "format": null
       },
       {
