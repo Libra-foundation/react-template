@@ -2,7 +2,7 @@ name: Linter CI
 
 on:
   pull_request:
-    branches: [ "main", "developement" ]
+    branches: [ "main", "development" ]
 
 jobs:
   build:
@@ -33,3 +33,4 @@ jobs:
       with:
         repo-token: '${{ secrets.GITHUB_TOKEN }}'
         report-json: 'eslint_report.json'
+        fail-on-warning: 'true'
