@@ -86,13 +86,13 @@
     "@typescript-eslint/naming-convention": [
       "warn",
       {
-        "selector": ["objectLiteralProperty", "accessor"],
+        "selector": ["accessor"],
         "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": ["objectLiteralProperty", "accessor"],
+        "selector": ["accessor"],
         "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
@@ -109,6 +109,10 @@
       {
         "selector": ["variable", "parameter"],
         "modifiers": ["destructured"],
+        "format": null
+      },
+      {
+        "selector": ["objectLiteralProperty", "objectLiteralMethod"],
         "format": null
       },
       {
@@ -157,7 +161,6 @@
       {
         "selector": [
           "classMethod",
-          "objectLiteralMethod",
           "typeMethod",
           "classProperty",
           "typeProperty",
@@ -170,7 +173,6 @@
       {
         "selector": [
           "classMethod",
-          "objectLiteralMethod",
           "typeMethod",
           "classProperty",
           "typeProperty",

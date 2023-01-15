@@ -9,4 +9,10 @@ function App(): JSX.Element {
   );
 }
 
+export function MesCouilles(zob: ReadonlyArray<string>): void {
+  for (const J of zob) {
+    console.log(J);
+  }
+}
+
 export default App;
