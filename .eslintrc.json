@@ -86,21 +86,26 @@
     "@typescript-eslint/naming-convention": [
       "warn",
       {
-        "selector": ["objectLiteralProperty", "accessor"],
+        "selector": ["accessor"],
         "format": ["UPPER_CASE", "camelCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
       {
-        "selector": ["objectLiteralProperty", "accessor"],
-        "format": ["UPPER_CASE", "camelCase"],
+        "selector": ["accessor"],
+        "format": ["UPPER_CASE", "PascalCase"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
         "prefix": ["IS_", "is"]
       },
       {
-        "selector": ["variable"],
+        "selector": [
+          "variable",
+          "classProperty",
+          "typeProperty",
+          "parameterProperty"
+        ],
         "format": ["PascalCase"],
         "types": ["function"],
         "leadingUnderscore": "forbid",
@@ -114,6 +119,12 @@
       {
         "selector": ["variable", "parameter"],
         "modifiers": ["destructured"],
+        "types": ["boolean"],
+        "format": null,
+        "prefix": []
+      },
+      {
+        "selector": ["objectLiteralProperty", "objectLiteralMethod"],
         "format": null
       },
       {
@@ -157,7 +168,6 @@
       {
         "selector": [
           "classMethod",
-          "objectLiteralMethod",
           "typeMethod",
           "classProperty",
           "typeProperty",
@@ -170,13 +180,12 @@
       {
         "selector": [
           "classMethod",
-          "objectLiteralMethod",
           "typeMethod",
           "classProperty",
           "typeProperty",
           "parameterProperty"
         ],
-        "format": ["camelCase"],
+        "format": ["PascalCase"],
         "types": ["boolean"],
         "prefix": ["is"],
         "leadingUnderscore": "forbid",
