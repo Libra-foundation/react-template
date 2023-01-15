@@ -19,7 +19,7 @@ export default function MyComponent(): JSX.Element {
 
   return (
     <MyChildComponent
-      ismyState={IS_MYSTATE.isMyState}
+      isMyState={IS_MYSTATE.isMyState}
       ChangeMyState={HandleChangeMyState}
     />
   );

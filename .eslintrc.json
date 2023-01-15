@@ -117,6 +117,13 @@
         "format": null
       },
       {
+        "selector": ["variable", "parameter"],
+        "modifiers": ["destructured"],
+        "types": ["boolean"],
+        "format": null,
+        "prefix": []
+      },
+      {
         "selector": ["objectLiteralProperty", "objectLiteralMethod"],
         "format": null
       },
