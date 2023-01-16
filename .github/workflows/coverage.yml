@@ -33,3 +33,14 @@ jobs:
       with:
         report-only-changed-files: true
         coverage-path: ./coverage.txt
+        
+    - name: Second Coverage Test
+    - uses: ArtiomTr/jest-coverage-report-action@v2
+      id: coverage
+      with:
+          output: report-markdown
+          annotations: failed-tests
+          
+    - uses: marocchino/sticky-pull-request-comment@v2
+      with:
+          message: ${{ steps.coverage.outputs.report }}
