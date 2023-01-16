@@ -25,17 +25,11 @@ jobs:
         cache: 'npm'
 
     - run: npm ci
-    - run: echo CI=true && npm run coverage > coverage.md
+    - name: Run tests
+      run: 'npm run test -- --coverage --coverageReporters json-summary | tee ./coverage.txt'
 
-    - name: Format comment
-      run: |
-        sed -i '$ d' coverage.md
-        sed -i "0,/-|/{/-|/d}" coverage.md
-
-    - name: Writing comment
-      uses: Libra-foundation/Pull-Request-Comments@V1.1.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Jest Coverage Comment
+      uses: MishaKav/jest-coverage-comment@main
       with:
-        filename: coverage.md
-        tag: 'Coverage'
+        report-only-changed-files: true
+        coverage-path: ./coverage.txt
