@@ -119,7 +119,7 @@
       {
         "selector": ["variable", "parameter"],
         "modifiers": ["destructured"],
-        "types": ["boolean"],
+        "types": ["boolean", "function"],
         "format": null,
         "prefix": []
       },
