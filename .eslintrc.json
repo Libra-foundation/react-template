@@ -296,7 +296,7 @@
     "@typescript-eslint/no-use-before-define": "warn",
     "@typescript-eslint/no-useless-constructor": "warn",
     "@typescript-eslint/require-await": "error",
-    "@typescript-eslint/return-await": "warn",
+    "@typescript-eslint/return-await": ["warn", "always"],
 
     "array-callback-return": ["error", {"checkForEach": true}],
     "constructor-super": "error",
