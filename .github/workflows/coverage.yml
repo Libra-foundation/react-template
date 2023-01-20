@@ -33,3 +33,8 @@ jobs:
       with:
         report-only-changed-files: true
         coverage-path: ./coverage.txt
+    # Jest does exit with a 0 exit code even if the tests fails
+    - run: |
+        if [ ${{steps.coverage.outputs.lines}} -eq 0 ]; then
+          exit 1;
+        fi
