@@ -2,10 +2,11 @@ import type {Config} from "jest";
 
 const config: Config = {
   transform: {
-    "^.+\\.tsx?$": "babel-jest",
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.(ts|tsx)?$": "ts-jest",
   },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  testMatch: ["<rootDir>/src/**/*.test.*"],
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)x?$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   testEnvironment: "node",
   testEnvironmentOptions: {
     node: {

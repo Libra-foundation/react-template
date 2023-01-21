@@ -1,15 +1,7 @@
-const config = {
+module.exports = {
   presets: [
     "@babel/preset-typescript",
-    [
-      "@babel/preset-modules",
-      {
-        loose: true,
-        allowTopLevelThis: true,
-      },
-    ],
+    "@babel/preset-env",
     "@babel/preset-react",
   ],
 };
-
-export default config;
