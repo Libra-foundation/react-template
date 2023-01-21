@@ -5,7 +5,7 @@ const config: Config = {
     "^.+\\.tsx?$": "babel-jest",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
-  testMatch: ["<rootDir>/src/**/*.test.ts", "<rootDir>/src/**/*.test.tsx"],
+  testMatch: ["<rootDir>/src/**/*.test.*"],
   testEnvironment: "node",
   testEnvironmentOptions: {
     node: {
