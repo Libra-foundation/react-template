@@ -8,6 +8,7 @@ const config = {
         allowTopLevelThis: true,
       },
     ],
+    "@babel/preset-react",
   ],
 };
 
