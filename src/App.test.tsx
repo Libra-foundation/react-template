@@ -4,8 +4,6 @@ import App from "./App";
 
 test("renders learn react link", () => {
   render(<App />);
-  const LINK_ELEMENT: HTMLElement = screen.getByText(
-    "E-constellatio " + import.meta.env.VITE_TITLE
-  );
+  const LINK_ELEMENT: HTMLElement = screen.getByText("E-constellatio");
   expect(LINK_ELEMENT).toBeInTheDocument();
 });

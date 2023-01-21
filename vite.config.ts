@@ -3,6 +3,11 @@ import EnvironmentPlugin from "vite-plugin-environment";
 
 export default defineConfig(({command, mode}) => {
   const env = loadEnv(mode, process.cwd(), "");
+
+  const envWithProcessPrefix = {
+    "process.env": `${JSON.stringify(env)}`,
+  };
+
   return {
     plugins: [EnvironmentPlugin("all")],
     build: {
@@ -11,8 +16,6 @@ export default defineConfig(({command, mode}) => {
     server: {
       port: 3000,
     },
-    define: {
-      __APP_ENV__: env.APP_ENV,
-    },
+    define: envWithProcessPrefix,
   };
 });
