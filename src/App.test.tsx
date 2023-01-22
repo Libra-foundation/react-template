@@ -5,7 +5,7 @@ import App from "./App";
 test("renders learn react link", () => {
   render(<App />);
   const LINK_ELEMENT: HTMLElement = screen.getByText(
-    "E-constellatio React template"
+    "E-constellatio React Template development"
   );
   expect(LINK_ELEMENT).toBeInTheDocument();
 });

@@ -6,9 +6,10 @@
   "extends": ["plugin:react/recommended", "plugin:eslint-comments/recommended"],
   "overrides": [
     {
-      "files": ["*.test.*"],
+      "files": ["**/*.test.*"],
       "plugins": ["jest"],
       "env": {
+        "jest": true,
         "jest/globals": true
       },
       "extends": ["plugin:jest/recommended"],
@@ -119,7 +120,7 @@
       {
         "selector": ["variable", "parameter"],
         "modifiers": ["destructured"],
-        "types": ["boolean"],
+        "types": ["boolean", "function"],
         "format": null,
         "prefix": []
       },
@@ -296,7 +297,7 @@
     "@typescript-eslint/no-use-before-define": "warn",
     "@typescript-eslint/no-useless-constructor": "warn",
     "@typescript-eslint/require-await": "error",
-    "@typescript-eslint/return-await": "warn",
+    "@typescript-eslint/return-await": ["warn", "always"],
 
     "array-callback-return": ["error", {"checkForEach": true}],
     "constructor-super": "error",

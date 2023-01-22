@@ -1,6 +1,0 @@
-build
-.github
-coverage
-node_modules
-package-lock.json
-*.css
