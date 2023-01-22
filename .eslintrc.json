@@ -6,9 +6,10 @@
   "extends": ["plugin:react/recommended", "plugin:eslint-comments/recommended"],
   "overrides": [
     {
-      "files": ["*.test.*"],
+      "files": ["**/*.test.*"],
       "plugins": ["jest"],
       "env": {
+        "jest": true,
         "jest/globals": true
       },
       "extends": ["plugin:jest/recommended"],

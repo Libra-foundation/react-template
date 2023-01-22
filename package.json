@@ -7,7 +7,7 @@
     "build_preprod": "tsc && vite build --mode preproduction",
     "build_prod": "tsc && vite build --mode production",
     "test": "jest",
-    "lint": "eslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\"",
     "coverage": "npm test -- --coverage --reporter=html --watchAll",
     "prepare": "husky install"
   },

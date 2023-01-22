@@ -6,11 +6,11 @@ const config: Config = {
   },
   transform: {
     "^.+\\.tsx?$": "babel-jest",
-    "^.+\\.svg$": "<rootDir>/svgTransform.js",
+    "^.+\\.svg$": "<rootDir>/JestConfig/svgTransform.js",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  testEnvironment: "jest-environment-jsdom",
-  setupFilesAfterEnv: ["./setupTests.ts"],
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["./src/setupTests.ts"],
 };
 
 export default config;
