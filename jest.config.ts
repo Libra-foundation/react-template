@@ -5,7 +5,7 @@ const config: Config = {
     "\\.(css|scss|sass)$": "identity-obj-proxy",
   },
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+    "^.+\\.tsx?$": "babel-jest",
     "^.+\\.svg$": "<rootDir>/svgTransform.js",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
