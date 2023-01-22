@@ -8,7 +8,7 @@
     "build_prod": "tsc && vite build --mode production",
     "test": "jest --module=es2020",
     "lint": "eslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
-    "coverage": "npm test --coverage --reporter=html --watchAll",
+    "coverage": "npm test -- --coverage --reporter=html --watchAll",
     "prepare": "husky install"
   },
   "browserslist": {
