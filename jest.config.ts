@@ -1,19 +1,17 @@
 import type {Config} from "jest";
 
 const config: Config = {
+  moduleNameMapper: {
+    "\\.(css|scss|sass)$": "identity-obj-proxy",
+  },
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest",
     "^.+\\.(ts|tsx)?$": "babel-jest",
+    "^.+\\.svg$": "<rootDir>/svgTransform.js",
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)x?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  testEnvironment: "node",
-  testEnvironmentOptions: {
-    node: {
-      ecmaVersion: "2022",
-      module: "esnext",
-    },
-  },
+  testEnvironment: "jest-environment-jsdom",
 };
 
 export default config;

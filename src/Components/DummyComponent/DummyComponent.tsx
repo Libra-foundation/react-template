@@ -6,7 +6,7 @@ export default function DummyComponent(): JSX.Element {
   return (
     <div className="Div">
       <img src={ReactTemplateLogo} alt="React template logo" className="Logo" />
-      <p className="test">E-constellatio {import.meta.env.VITE_TITLE}</p>
+      <p className="test">E-constellatio {process.env.VITE_TITLE}</p>
     </div>
   );
 }

@@ -1,11 +1,14 @@
 /// <reference types="vite/client" />
 
-interface ImportMetaEnv {
-  readonly VITE_TITLE: string;
-  // more env variables...
+type DictRecord<T> = Record<string, T | undefined>;
+
+interface ProcessEnv extends DictRecord<string> {
+  /**
+   * Can be used to change the default timezone at runtime
+   */
+  TZ?: string;
 }
 
-interface ImportMeta {
-  // eslint-disable-next-line @typescript-eslint/naming-convention -- Vite standard naming
-  readonly env: ImportMetaEnv;
+export interface Process {
+  env: ProcessEnv;
 }
