@@ -10,7 +10,7 @@ const config: Config = {
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testEnvironment: "jest-environment-jsdom",
-  setupFilesAfterEnv: ["./src/setupTests.ts"],
+  setupFilesAfterEnv: ["./setupTests.ts"],
 };
 
 export default config;

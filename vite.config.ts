@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig(({command, mode}) => {
-  const env = loadEnv(mode, process.cwd(), "");
+  const env = loadEnv(mode, process.cwd().concat("/EnvFiles"), "");
 
   const envWithProcessPrefix = {
     "process.env": `${JSON.stringify(env)}`,
