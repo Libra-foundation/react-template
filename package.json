@@ -11,6 +11,9 @@
     "coverage": "npm test -- --coverage --reporter=html --watchAll",
     "prepare": "husky install"
   },
+  "prettier": {
+    "bracketSpacing": false
+  },
   "browserslist": {
     "production": [
       ">0.2%",
