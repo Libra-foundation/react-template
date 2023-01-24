@@ -98,7 +98,7 @@
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
-        "prefix": ["IS_", "is"]
+        "prefix": ["IS_", "is", "HAS_", "has"]
       },
       {
         "selector": [
