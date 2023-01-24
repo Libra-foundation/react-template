@@ -10,5 +10,5 @@ updates:
     directory: /
     schedule:
       interval: daily
-    labels: Refactor
+    labels: [Refactor]
     target-branch: development
