@@ -1,6 +1,5 @@
-import type {Config} from "jest";
-
-const config: Config = {
+/** @returns {Promise<import('jest').Config>} */
+module.exports = async () => ({
   moduleNameMapper: {
     "\\.(css|scss|sass)$": "identity-obj-proxy",
   },
@@ -11,6 +10,4 @@ const config: Config = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["./src/setupTests.ts"],
-};
-
-export default config;
+})
