@@ -6,7 +6,7 @@
     "start": "vite --mode development",
     "build_preprod": "tsc && vite build --mode preproduction",
     "build_prod": "tsc && vite build --mode production",
-    "test": "jest",
+    "test": "jest -c config/jest.config.js",
     "lint": "eslint \"./src/**/*.{ts,tsx}\"",
     "coverage": "npm test -- --coverage --reporter=html --watchAll",
     "prepare": "husky install"
