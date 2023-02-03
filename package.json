@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "vite --mode development",
-    "build_preprod": "tsc && vite build --mode preproduction",
-    "build_prod": "tsc && vite build --mode production",
+    "start": "vite -c config/vite.config.ts --mode development",
+    "build_preprod": "tsc && vite -c config/vite.config.ts build --mode preproduction",
+    "build_prod": "tsc && vite -c config/vite.config.ts build --mode production",
     "test": "jest -c config/jest.config.js",
     "lint": "eslint \"./src/**/*.{ts,tsx}\"",
     "coverage": "npm test -- --coverage --reporter=html --watchAll",
