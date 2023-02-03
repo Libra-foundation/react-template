@@ -10,5 +10,5 @@ module.exports = async () => ({
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["./src/setupTests.ts"],
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
 })
