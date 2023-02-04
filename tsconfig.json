@@ -18,5 +18,8 @@
     "jsx": "react-jsx",
     "strictBindCallApply": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "config/jest" // for setupTests.ts
+  ]
 }

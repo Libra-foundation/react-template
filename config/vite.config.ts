@@ -12,7 +12,6 @@ export default defineConfig(({command, mode}) => {
 
   return {
     plugins: [react(), svgr(), EnvironmentPlugin("all")],
-    root: "..",
     build: {
       outDir: "build",
     },
