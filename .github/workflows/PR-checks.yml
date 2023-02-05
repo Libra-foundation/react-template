@@ -1,0 +1,91 @@
+name: PR checks
+
+on:
+  pull_request:
+    branches: [ "main", "development" ]
+
+jobs:
+  lint:
+    permissions:
+      checks: write
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run lint -- --output-file eslint_report.json --format json
+
+      - name: Annotate Code Linting Results
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        if: always()
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          report-json: 'eslint_report.json'
+          fail-on-warning: 'true'
+
+  coverage:
+    permissions:
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: npm ci
+      - name: Run tests
+        run: 'npm run test -- --coverage --coverageReporters json-summary --coverageReporters text | tee ./coverage.txt'
+
+      - name: Jest Coverage Comment
+        uses: MishaKav/jest-coverage-comment@main
+        id: coverage
+        with:
+          report-only-changed-files: true
+          coverage-path: ./coverage.txt
+      - name: Fixing Jest
+        # Jest does exit with a 0 exit code even if the tests fails
+        run: |
+          if [ ${{steps.coverage.outputs.lines}} -eq 0 ]; then
+            exit 1;
+          fi
+
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run build_preprod

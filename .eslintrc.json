@@ -98,7 +98,7 @@
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid",
         "types": ["boolean"],
-        "prefix": ["IS_", "is"]
+        "prefix": ["IS_", "is", "HAS_", "has"]
       },
       {
         "selector": [
@@ -140,7 +140,7 @@
         "format": ["UPPER_CASE"],
         "modifiers": ["const"],
         "types": ["boolean"],
-        "prefix": ["IS_"],
+        "prefix": ["IS_", "HAS_"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -162,7 +162,7 @@
         "format": ["UPPER_CASE"],
         "modifiers": ["readonly"],
         "types": ["boolean"],
-        "prefix": ["IS_"],
+        "prefix": ["IS_", "HAS_"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -188,7 +188,7 @@
         ],
         "format": ["PascalCase"],
         "types": ["boolean"],
-        "prefix": ["is"],
+        "prefix": ["is", "has"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
@@ -202,7 +202,7 @@
         "selector": ["parameter", "variable"],
         "format": ["snake_case"],
         "types": ["boolean"],
-        "prefix": ["is_"],
+        "prefix": ["is_", "has_"],
         "leadingUnderscore": "forbid",
         "trailingUnderscore": "forbid"
       },
