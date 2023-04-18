@@ -7,6 +7,8 @@ on:
   workflow_dispatch:
 jobs:
   repo-sync:
+    permissions: write-all
+    
     runs-on: ubuntu-latest
 
     steps:
